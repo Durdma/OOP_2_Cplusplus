@@ -1,4 +1,4 @@
-#define NOMINMAX
+п»ї#define NOMINMAX
 
 #include <iostream>
 #include <iomanip>
@@ -13,12 +13,12 @@ void checkInput(float &input_buff, const bool flag)
 	if (flag == 0)
 	{
 
-		while (!std::cin.good() || std::cin.peek() != '\n')		//Проверка на то, что float
+		while (!std::cin.good() || std::cin.peek() != '\n')		//РџСЂРѕРІРµСЂРєР° РЅР° С‚Рѕ, С‡С‚Рѕ float
 		{
 
-			std::cerr << "Некорректный ввод данных!!!" << std::endl;
-			std::cout << "Вводимое поле должно быть вещественным числом!!!" << std::endl;
-			std::cout << "Повторите ввод!!!" << std::endl;
+			std::cerr << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ РґР°РЅРЅС‹С…!!!" << std::endl;
+			std::cout << "Р’РІРѕРґРёРјРѕРµ РїРѕР»Рµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РІРµС‰РµСЃС‚РІРµРЅРЅС‹Рј С‡РёСЃР»РѕРј!!!" << std::endl;
+			std::cout << "РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ!!!" << std::endl;
 			std::cout << std::endl;
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -33,12 +33,12 @@ void checkInput(float &input_buff, const bool flag)
 	else
 	{
 
-		while ((!std::cin.good() || std::cin.peek() != '\n') || input_buff <= 0)		//Проверка на то, что float
+		while ((!std::cin.good() || std::cin.peek() != '\n') || input_buff <= 0)		//РџСЂРѕРІРµСЂРєР° РЅР° С‚Рѕ, С‡С‚Рѕ float
 		{
 
-			std::cerr << "Некорректный ввод данных!!!" << std::endl;
-			std::cout << "Вводимое поле должно быть неравно нулю, положительным вещественным числом!!!" << std::endl;
-			std::cout << "Повторите ввод!!!" << std::endl;
+			std::cerr << "РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ РґР°РЅРЅС‹С…!!!" << std::endl;
+			std::cout << "Р’РІРѕРґРёРјРѕРµ РїРѕР»Рµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РЅРµСЂР°РІРЅРѕ РЅСѓР»СЋ, РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј РІРµС‰РµСЃС‚РІРµРЅРЅС‹Рј С‡РёСЃР»РѕРј!!!" << std::endl;
+			std::cout << "РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ!!!" << std::endl;
 			std::cout << std::endl;
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -56,23 +56,23 @@ void checkInput(float &input_buff, const bool flag)
 void InputCircle(float &x, float &y, float &radius)
 {
 
-	std::cout << "Введите параметры кртуга: " << std::endl;
+	std::cout << "Р’РІРµРґРёС‚Рµ РїР°СЂР°РјРµС‚СЂС‹ РєСЂС‚СѓРіР°: " << std::endl;
 
-	std::cout << "Введите координату Х центра круга: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚Сѓ РҐ С†РµРЅС‚СЂР° РєСЂСѓРіР°: ";
 	std::cin >> x;
 
 	checkInput(x, 0);
 
 	std::cout << std::endl;
 
-	std::cout << "Введите координату Y центра круга: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚Сѓ Y С†РµРЅС‚СЂР° РєСЂСѓРіР°: ";
 	std::cin >> y;
 
 	checkInput(y, 0);
 
 	std::cout << std::endl;
 
-	std::cout << "Введите радиус круга: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ СЂР°РґРёСѓСЃ РєСЂСѓРіР°: ";
 	std::cin >> radius;
 
 	checkInput(radius, 1);
@@ -84,15 +84,15 @@ void InputCircle(float &x, float &y, float &radius)
 void InputDot(float &x, float &y)
 {
 
-	std::cout << "Введите координаты проверяемой точки: " << std::endl;
+	std::cout << "Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ РїСЂРѕРІРµСЂСЏРµРјРѕР№ С‚РѕС‡РєРё: " << std::endl;
 
-	std::cout << "Введите координату Х проверяемой точки: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚Сѓ РҐ РїСЂРѕРІРµСЂСЏРµРјРѕР№ С‚РѕС‡РєРё: ";
 	std::cin >> x;
 	std::cout << std::endl;
 
 	checkInput(x, 0);
 
-	std::cout << "Введите координату Y проверяемой точки: ";
+	std::cout << "Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚Сѓ Y РїСЂРѕРІРµСЂСЏРµРјРѕР№ С‚РѕС‡РєРё: ";
 	std::cin >> y;
 	std::cout << std::endl;
 
@@ -106,8 +106,8 @@ void GetResult(const float &dotX, const float &dotY, Circle &circle)
 	if (circle.dotInBorders(dotX, dotY) == 1)
 	{
 
-		std::cout << "Точка с координатами x= " << dotX << " y= " << dotY
-			<< " Входит в окружность с параметрами: " << std::endl;
+		std::cout << "РўРѕС‡РєР° СЃ РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё x= " << dotX << " y= " << dotY
+			<< " Р’С…РѕРґРёС‚ РІ РѕРєСЂСѓР¶РЅРѕСЃС‚СЊ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё: " << std::endl;
 		std::cout << "x= " << circle.getX() << " y= " << circle.getY()
 			<< " r= " << circle.getRadius() << std::endl;
 		std::cout << std::endl;
@@ -116,8 +116,8 @@ void GetResult(const float &dotX, const float &dotY, Circle &circle)
 
 	}
 
-	std::cout << "Точка с координатами x= " << dotX << " y= " << dotY
-		<< " Не входит в окружность с параметрами: " << std::endl;
+	std::cout << "РўРѕС‡РєР° СЃ РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё x= " << dotX << " y= " << dotY
+		<< " РќРµ РІС…РѕРґРёС‚ РІ РѕРєСЂСѓР¶РЅРѕСЃС‚СЊ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё: " << std::endl;
 	std::cout << "x= " << circle.getX() << " y= " << circle.getY()
 		<< " r= " << circle.getRadius() << std::endl;
 	std::cout << std::endl;
@@ -133,9 +133,9 @@ void main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	std::cout << "Круг на плоскости имеет координаты центра x, y - вещественные поля. "
-		<< "Радиус круга r - также задан вещественным полем."
-		<< "Реализовать метод проверяющий" << std::endl << " принадлежность точки с координатами (x, y) данному кругу."
+	std::cout << "РљСЂСѓРі РЅР° РїР»РѕСЃРєРѕСЃС‚Рё РёРјРµРµС‚ РєРѕРѕСЂРґРёРЅР°С‚С‹ С†РµРЅС‚СЂР° x, y - РІРµС‰РµСЃС‚РІРµРЅРЅС‹Рµ РїРѕР»СЏ. "
+		<< "Р Р°РґРёСѓСЃ РєСЂСѓРіР° r - С‚Р°РєР¶Рµ Р·Р°РґР°РЅ РІРµС‰РµСЃС‚РІРµРЅРЅС‹Рј РїРѕР»РµРј."
+		<< "Р РµР°Р»РёР·РѕРІР°С‚СЊ РјРµС‚РѕРґ РїСЂРѕРІРµСЂСЏСЋС‰РёР№" << std::endl << " РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚СЊ С‚РѕС‡РєРё СЃ РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё (x, y) РґР°РЅРЅРѕРјСѓ РєСЂСѓРіСѓ."
 		<< std::endl;
 
 

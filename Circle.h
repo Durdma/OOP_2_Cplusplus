@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include <iostream>
 #include <iomanip>
@@ -15,9 +15,9 @@ private:
 
 public:
 
-	Circle();							// Конструктор по умолчанию
-	Circle(float, float, float);		// Конструктор для установки начальных данных
-	Circle(const Circle &);				// Конструктор копирования
+	Circle();							// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	Circle(float, float, float);		// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё РЅР°С‡Р°Р»СЊРЅС‹С… РґР°РЅРЅС‹С…
+	Circle(const Circle &);				// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
 	~Circle();
 
 
@@ -27,7 +27,7 @@ public:
 	float getX() { return m_x; };
 	float getY() { return m_y; };
 	float getRadius() { return m_radius; };
-	bool dotInBorders(float, float);	// Метод по заданию
+	bool dotInBorders(float, float);	// РњРµС‚РѕРґ РїРѕ Р·Р°РґР°РЅРёСЋ
 
 };
 
@@ -35,7 +35,7 @@ Circle::Circle(): m_x{ 0 }, m_y{ 0 }, m_radius{ 1 }
 {
 
 	std::cout << std::endl;
-	std::cout << "Сработал конструктор по умолчанию!" << std::endl;
+	std::cout << "РЎСЂР°Р±РѕС‚Р°Р» РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ!" << std::endl;
 	std::cout << std::endl;
 
 }
@@ -45,7 +45,7 @@ Circle::Circle(float inputX, float inputY, float inputRadius)
 {
 
 	std::cout << std::endl;
-	std::cout << "Сработал конструктор для установки начальных значений!" << std::endl;
+	std::cout << "РЎСЂР°Р±РѕС‚Р°Р» РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё РЅР°С‡Р°Р»СЊРЅС‹С… Р·РЅР°С‡РµРЅРёР№!" << std::endl;
 	std::cout << std::endl;
 
 }
@@ -55,7 +55,7 @@ Circle::Circle(const Circle &circle)
 {
 
 	std::cout << std::endl;
-	std::cout << "Сработал конструктор копирования!" << std::endl;
+	std::cout << "РЎСЂР°Р±РѕС‚Р°Р» РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ!" << std::endl;
 	std::cout << std::endl;
 
 }
@@ -64,7 +64,7 @@ Circle::~Circle()
 {
 
 	std::cout << std::endl;
-	std::cout << "Сработал диструктор!" << std::endl;
+	std::cout << "РЎСЂР°Р±РѕС‚Р°Р» РґРёСЃС‚СЂСѓРєС‚РѕСЂ!" << std::endl;
 	std::cout << std::endl;
 
 }
